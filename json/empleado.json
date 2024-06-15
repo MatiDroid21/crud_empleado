@@ -23,5 +23,13 @@
         "edad": 20,
         "sueldo_base": 1000000,
         "id_cargo": "C1"
+    },
+    {
+        "id_empleado": "ec45",
+        "nombre": "Mana",
+        "apellido": "Mana",
+        "edad": 34,
+        "sueldo_base": 34,
+        "id_cargo": "EC2"
     }
 ]

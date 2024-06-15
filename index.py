@@ -22,13 +22,28 @@ def guardar_archivo_json(url,data):
 
     #falta validar int
 def listar_empleados():
+    import os
     os.system("cls")
     print("=== Listado De Empleados ===")
     empleados = leer_archivo_json(url_empleados)
-    #print(empleados)
-    headers = ['id_empleado','nombre','apellido','edad','sueldo','id_cargo']
-    co_widths = [15,15,15,15,15]
-    print(empleados)
+    headers = ['id_empleado', 'nombre', 'apellido', 'edad', 'id_cargo','sueldo_base',]
+    
+    # Imprimir encabezados
+    header_format = "{:<15} {:<15} {:<15} {:<15} {:<15} {:<15}"
+    print(header_format.format(*headers))
+    
+    # Imprimir datos de empleados
+    for empleado in empleados:
+        print("{:<15} {:<15} {:<15} {:<15} {:<15} {:<15}".format(
+            empleado['id_empleado'], 
+            empleado['nombre'], 
+            empleado['apellido'], 
+            empleado['edad'], 
+            empleado['id_cargo'],
+            empleado['sueldo_base']
+            
+        ))
+
 
 def actualizar_empleado():   
     os.system("cls")
